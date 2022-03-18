@@ -47,7 +47,7 @@ public class MyCORBAObjectClient {
 		object.addBank("221-00-299", 1, 1400.0);
 		object.addBank("201-00-878", 2, 100.0);
 		System.out.println("GET");
-		log(object.getBank(1));
+		object.printBank(object.getBank(1));
 		System.out.println("GET ALL");
 		logALL(object.getBankList());
 		
@@ -61,10 +61,6 @@ public class MyCORBAObjectClient {
 		object.updateBank(0, "111-01-111", 0, 1000.00);
 		System.out.println("GET ALL");
 		logALL(object.getBankList());
-	}
-
-	private static void log(Bank arg){
-		System.out.println("\t"+arg.id + " , " + arg.account + " , " + arg.price);
 	}
 
 	private static void logALL(Bank[] arr){

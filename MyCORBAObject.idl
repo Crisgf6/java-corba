@@ -20,7 +20,6 @@ interface MyCORBAObject
 
 	void addToList(in string msg);
 
-
 	void addBank(in string account, in long id, in double price);
 
 	MyBankObjects getBankList();
@@ -30,4 +29,6 @@ interface MyCORBAObject
 	void removeBank(in long index);
 
 	void updateBank(in long index, in string account, in long id, in double price);
+
+	void printBank(in Bank bank);
 };

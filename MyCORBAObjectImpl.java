@@ -58,4 +58,8 @@ public class MyCORBAObjectImpl extends MyCORBAObjectPOA{
 		System.out.println("LOG : SEVER UPDATE Bank");
 		bankList.set(index, new Bank(account, id, price));		
 	}
+
+	public void printBank(Bank bank){
+		System.out.println("\t" + bank.id + ", " + bank.account + ", " + bank.price);
+	}
 }
