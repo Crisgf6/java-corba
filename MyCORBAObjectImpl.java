@@ -62,4 +62,10 @@ public class MyCORBAObjectImpl extends MyCORBAObjectPOA{
 	public void printBank(Bank bank){
 		System.out.println("\t" + bank.id + ", " + bank.account + ", " + bank.price);
 	}
+
+	public void increasePrice(long index, double amount){
+		Bank bank = bankList.get(index);
+		amount = amount + bank.price;
+		bankList.set(index, new Bank(bank.account, bank.id, amount));
+	}
 }

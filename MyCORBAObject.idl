@@ -31,4 +31,6 @@ interface MyCORBAObject
 	void updateBank(in long index, in string account, in long id, in double price);
 
 	void printBank(in Bank bank);
+
+	void increasePrice(in long index, in double amount);
 };
